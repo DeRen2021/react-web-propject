@@ -2,7 +2,6 @@ import React ,{useState, useMemo,useEffect}from 'react';
 import { useData } from '../../Context/DataContext';
 import { useNavigate } from 'react-router-dom';
 import './Post.css'
-import {type PostType} from '../../Type/Types'
 
 const Post: React.FC = () => {
     const { posts } = useData();

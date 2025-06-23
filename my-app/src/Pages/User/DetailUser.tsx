@@ -1,6 +1,6 @@
 import React ,{useState, useMemo}from 'react';
 import {useData} from '../../Context/DataContext'
-import {type PostType ,type UserType} from '../../Type/Types'
+import {type UserType} from '../../Type/Types'
 import { useParams } from 'react-router-dom';
 import './DetailUser.css';
 

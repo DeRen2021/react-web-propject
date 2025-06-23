@@ -1,4 +1,4 @@
-import React, { useState, type SyntheticEvent, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
@@ -41,7 +41,7 @@ export default function BasicTabs() {
     setValue(getTabValue());
   }, [location.pathname]);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (_: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
     
     switch (newValue) {
