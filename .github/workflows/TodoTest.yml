@@ -1,0 +1,40 @@
+name: Todo Test
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'my-app/src/Pages/Todo/**'
+      - 'my-app/src/Pages/Todo/__tests__/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'my-app/src/Pages/Todo/**'
+      - 'my-app/src/Pages/Todo/__tests__/**'
+
+jobs:
+  todo-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        cache: 'npm'
+        cache-dependency-path: my-app/package-lock.json
+        
+    - name: Install dependencies
+      working-directory: ./my-app
+      run: npm ci
+      
+    - name: Run Todo component tests
+      working-directory: ./my-app
+      run: npm test -- --testPathPattern=Todo.test.tsx --watchAll=false --verbose
+      
+    - name: Display test results
+      if: always()
+      run: echo "Todo tests completed"
