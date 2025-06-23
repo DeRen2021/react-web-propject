@@ -1,16 +1,7 @@
 name: Todo Test
 
 on:
-  push:
-    branches: [ main, develop ]
-    paths:
-      - 'my-app/src/Pages/Todo/**'
-      - 'my-app/src/Pages/Todo/__tests__/**'
-  pull_request:
-    branches: [ main ]
-    paths:
-      - 'my-app/src/Pages/Todo/**'
-      - 'my-app/src/Pages/Todo/__tests__/**'
+  workflow_dispatch:  
 
 jobs:
   todo-test:
