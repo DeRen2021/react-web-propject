@@ -1,0 +1,82 @@
+.post-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    /* grid-template-rows: 1fr 1fr 1fr; */
+
+    gap: 20px;
+    padding: 20px;
+}
+
+
+/* 搜索栏样式 */
+.search-container {
+    padding: 20px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.search-bar {
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    min-width: 300px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-bar:focus {
+    border-color: #007bff;
+}
+
+.search-count {
+    color: #666;
+    font-size: 14px;
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+    font-size: 18px;
+}
+
+/* 卡片样式 */
+.card{
+    background: #f8f8f8;
+    border-radius: 8px;
+    border: 2px solid black;
+    padding: 15px;
+}
+
+.clickable-card {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.clickable-card:hover {
+    background-color: #e8f4fd;
+    border-color: #007bff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.card p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.post-body {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 10px !important;
+}

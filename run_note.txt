@@ -1,0 +1,7 @@
+npm create vite@latest my-app -- --template react-ts
+
+
+npm install @mui/material @emotion/react @emotion/styled
+
+
+npm test src/component/Todo/__tests__/Todo.test.tsx
